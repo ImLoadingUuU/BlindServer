@@ -4,12 +4,11 @@ var config = {
 console.log("Blind Server 0.1 - Alpha")
 console.log("Blind Server | Do you know,BlindServer has just 23 lines of codes!")
 const express = require('express')
-const bp = require('body-parser')
 const app = express()
 const Html2Obj = require('html2obj')
 
 app.use(express.json())
-app.use(bp.urlencoded({ extended: true }))
+
 app.post('/', function (req, res) {
     var html = req.body.html
     console.log(req.body)
